@@ -82,19 +82,28 @@ print(tea, 'Teas at $2 each:','$',formatted_tea_total)
 subtotal = int(coffee_total + muffin_total + bagel_total + tea_total)
 
 # %%
-print('6% tax: $', (subtotal * .06))
+
+tax = float(subtotal * .06)
+
+formatted_tax = f"{tax:.2f}"
+
+print('6% tax: $',formatted_tax)
 
 # %%
 # tax is the calculated sales tax on the purchase, it will be added to the subtotal
 
 # %%
-tax = float(subtotal * .06)
+
 
 # %%
 print('---------')
 
+total = (subtotal + tax)
+
+formatted_total = f"{total:.2f}"
+
 # %%
-print('Total: $', (subtotal + tax))  
+print('Total: $',total)  
 
 print('Thank you so much for your purchase! We hope to see you again soon!')
 
